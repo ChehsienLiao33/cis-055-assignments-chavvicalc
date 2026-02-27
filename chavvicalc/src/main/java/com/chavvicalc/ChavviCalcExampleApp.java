@@ -91,13 +91,23 @@ public class ChavviCalcExampleApp {
       case 'a':
         System.out.print("Enter a value for A: ");
         A = scan.nextDouble();
-        scan.nextLine(); // clear newline
+        scan.nextLine();
         break;
 
       case 'b':
         System.out.print("Enter a value for B: ");
         B = scan.nextDouble();
         scan.nextLine();
+        break;
+
+      case '+':
+        // A = A + B
+        A = A + B;
+        break;
+
+      case '-':
+        // A = A - B
+        A = A - B;
         break;
 
       case 'q':
