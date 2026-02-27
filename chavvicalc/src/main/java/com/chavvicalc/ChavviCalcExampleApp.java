@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class ChavviCalcExampleApp {
 
-  // GLOBAL VARIABLES
+  // global variables
   private static double A = 0.0;
   private static double B = 0.0;
 
@@ -121,6 +121,11 @@ public class ChavviCalcExampleApp {
         } else {
           A = A / B;
         }
+        break;
+
+      case 'c':
+        A = 0.0;
+        B = 0.0;
         break;
 
       case 'q':
