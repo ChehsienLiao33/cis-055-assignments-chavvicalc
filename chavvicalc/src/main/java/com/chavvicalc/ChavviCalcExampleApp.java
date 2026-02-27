@@ -28,6 +28,22 @@ public class ChavviCalcExampleApp {
         break; // exit loop
       }
 
+      // ask the user to enter a number for A
+      if (command == 'a') {
+        System.out.print("Enter a value for A: ");
+        A = scan.nextDouble();
+        scan.nextLine(); // clear newline
+        continue;
+      }
+
+      // ask the user to enter a number for B
+      if (command == 'b') {
+        System.out.print("Enter a value for B: ");
+        B = scan.nextDouble();
+        scan.nextLine();
+        continue;
+      }
+
       // everything else still unimplemented
       executeCommand(scan, command);
     }
