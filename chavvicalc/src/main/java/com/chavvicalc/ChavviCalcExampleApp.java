@@ -110,6 +110,19 @@ public class ChavviCalcExampleApp {
         A = A - B;
         break;
 
+      case '*':
+        A = A * B;
+        break;
+
+      case '/':
+        if (B == 0) {
+          System.out.println("ERROR: Divide by zero");
+          success = false;
+        } else {
+          A = A / B;
+        }
+        break;
+
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
