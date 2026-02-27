@@ -11,6 +11,9 @@ public class ChavviCalcExampleApp {
     Scanner scan = new Scanner(System.in);
     Character command = '_';
 
+    double A = 0.0;
+    double B = 0.0;
+
     // loop until user quits
     while (command != 'q') {
       printMenu();
