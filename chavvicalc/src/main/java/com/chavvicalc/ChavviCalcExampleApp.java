@@ -14,12 +14,21 @@ public class ChavviCalcExampleApp {
     double A = 0.0;
     double B = 0.0;
 
-    // loop until user quits
-    while (command != 'q') {
-      printMenu();
+    // loop until 'q' is pressed
+    while (true) {
+      // show menu with current values
+      printMenu(A, B);
+
       System.out.print("Enter a command: ");
       command = menuGetCommand(scan);
 
+      // handle quitting
+      if (command == 'q') {
+        System.out.println("Thank you for using Chavvi Calc");
+        break; // exit loop
+      }
+
+      // everything else still unimplemented
       executeCommand(scan, command);
     }
 
@@ -39,13 +48,12 @@ public class ChavviCalcExampleApp {
   }
 
   // prints the menu
-  public static void printMenu() {
+  public static void printMenu(double A, double B) {
     printMenuLine();
     System.out.println("Chavvi Calc");
     printMenuLine();
 
-    // Display A and B with 3 significant digits
-    System.out.printf("A = %.3f\tB = %.3f\n", 0.0, 0.0);
+    System.out.printf("A = %.3f\tB = %.3f\n", A, B);
     printMenuLine();
 
     printMenuCommand('a', "Enter a value for A");
