@@ -7,17 +7,18 @@ import java.util.*;
  */
 public class ChavviCalcExampleApp {
 
+  // GLOBAL VARIABLES
+  private static double A = 0.0;
+  private static double B = 0.0;
+
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     Character command = '_';
 
-    double A = 0.0;
-    double B = 0.0;
-
     // loop until 'q' is pressed
     while (true) {
       // show menu with current values
-      printMenu(A, B);
+      printMenu();
 
       System.out.print("Enter a command: ");
       command = menuGetCommand(scan);
@@ -29,7 +30,7 @@ public class ChavviCalcExampleApp {
       }
 
       // everything else still unimplemented
-      executeCommand(scan, command, A, B);
+      executeCommand(scan, command);
     }
 
     scan.close();
@@ -48,7 +49,7 @@ public class ChavviCalcExampleApp {
   }
 
   // prints the menu
-  public static void printMenu(double A, double B) {
+  public static void printMenu() {
     printMenuLine();
     System.out.println("Chavvi Calc");
     printMenuLine();
@@ -83,7 +84,7 @@ public class ChavviCalcExampleApp {
   }
 
   // calculator functions
-  private static Boolean executeCommand(Scanner scan, Character command, double A, double B) {
+  private static Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
 
     switch (command) {
