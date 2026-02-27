@@ -29,7 +29,6 @@ public class ChavviCalcExampleApp {
         break; // exit loop
       }
 
-      // everything else still unimplemented
       executeCommand(scan, command);
     }
 
